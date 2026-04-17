@@ -10,6 +10,13 @@
   --font-display: 'Space Grotesk', sans-serif;
 }
 
+:root[data-theme='light'] {
+  --color-bg: #f7eef2;
+  --color-bg-deep: #efe3e8;
+  --color-text: #23161b;
+  --color-muted: #7e6a73;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -40,6 +47,10 @@ body {
   background: linear-gradient(180deg, rgba(20, 12, 15, 0.98), rgba(10, 8, 9, 0.98));
   box-shadow: 0 32px 90px rgba(0, 0, 0, 0.45);
   overflow: hidden;
+}
+
+:root[data-theme='light'] #root {
+  background: linear-gradient(180deg, rgba(255, 248, 250, 0.98), rgba(245, 235, 239, 0.98));
 }
 
 a {

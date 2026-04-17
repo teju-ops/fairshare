@@ -15,7 +15,16 @@ app.use(helmet());
 app.use(
   cors({
     origin(origin, callback) {
-      if (!origin || allowedOrigins.length === 0 || allowedOrigins.includes(origin)) {
+      const isLocalDevOrigin =
+        origin &&
+        /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/i.test(origin);
+
+      if (
+        !origin ||
+        allowedOrigins.length === 0 ||
+        allowedOrigins.includes(origin) ||
+        isLocalDevOrigin
+      ) {
         return callback(null, true);
       }
 

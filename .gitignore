@@ -11,3 +11,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+*.log
+FairShare/fairshare-backend/src/data/demo-store.json
