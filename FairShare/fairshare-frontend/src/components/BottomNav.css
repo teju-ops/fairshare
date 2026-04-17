@@ -1,0 +1,59 @@
+.bottom-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: var(--spacing-sm) var(--spacing-md);
+  padding-bottom: var(--spacing-lg);
+  background-color: var(--bg-dark); /* or glass */
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.nav-label {
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.active-label {
+  color: var(--accent-pink);
+}
+
+.nav-item-active .lucide {
+  /* color handled via component prop, could do SVG stroke here */
+}
+
+.nav-item-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  flex: 1;
+  position: relative;
+  /* Lift up slightly */
+  margin-top: -10px;
+}
+
+.center-fab {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--accent-red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4px;
+  box-shadow: 0 4px 12px rgba(143, 23, 54, 0.4);
+}

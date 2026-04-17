@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap');
+
+:root {
+  --color-bg: #120b0f;
+  --color-bg-deep: #0b0709;
+  --color-accent-soft: #ff86a6;
+  --color-text: #fff5f7;
+  --color-muted: #9f8e95;
+  --font-body: 'DM Sans', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background:
+    radial-gradient(circle at top, rgba(126, 17, 52, 0.28), transparent 34%),
+    linear-gradient(180deg, var(--color-bg), var(--color-bg-deep));
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background: linear-gradient(180deg, rgba(20, 12, 15, 0.98), rgba(10, 8, 9, 0.98));
+  box-shadow: 0 32px 90px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  appearance: none;
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+input,
+select {
+  font-family: inherit;
+}
+
+h1,
+h2,
+h3,
+strong {
+  font-family: var(--font-display);
+}
+
+@media (max-width: 767px) {
+  #root {
+    box-shadow: none;
+  }
+}
