@@ -1,10 +1,9 @@
 [build]
-  base = "FairShare/fairshare-frontend"
-  command = "npm run build"
-  publish = "dist"
+  command = "npm --prefix FairShare/fairshare-frontend run build"
+  publish = "FairShare/fairshare-frontend/dist"
 
 [functions]
-  directory = "netlify/functions"
+  directory = "FairShare/fairshare-frontend/netlify/functions"
   node_bundler = "esbuild"
 
 [[headers]]
