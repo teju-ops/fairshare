@@ -2,6 +2,9 @@
   command = "npm --prefix FairShare/fairshare-frontend run build"
   publish = "FairShare/fairshare-frontend/dist"
 
+[build.environment]
+  VITE_API_BASE_URL = "https://fairshare-backend-0uyy.onrender.com/api"
+
 [functions]
   directory = "FairShare/fairshare-frontend/netlify/functions"
   node_bundler = "esbuild"
