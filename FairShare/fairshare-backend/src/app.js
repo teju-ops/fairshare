@@ -10,6 +10,10 @@ const allowedOrigins = (process.env.CORS_ORIGINS || '')
   .split(',')
   .map((origin) => origin.trim())
   .filter(Boolean);
+const defaultAllowedOrigins = new Set([
+  'https://fairshar3.netlify.app',
+  'https://www.fairshar3.netlify.app',
+]);
 
 app.use(helmet());
 app.use(
@@ -18,12 +22,16 @@ app.use(
       const isLocalDevOrigin =
         origin &&
         /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/i.test(origin);
+      const isNetlifyPreview =
+        origin &&
+        /^https:\/\/[a-z0-9-]+--fairshar3\.netlify\.app$/i.test(origin);
 
       if (
         !origin ||
-        allowedOrigins.length === 0 ||
+        defaultAllowedOrigins.has(origin) ||
         allowedOrigins.includes(origin) ||
-        isLocalDevOrigin
+        isLocalDevOrigin ||
+        isNetlifyPreview
       ) {
         return callback(null, true);
       }
