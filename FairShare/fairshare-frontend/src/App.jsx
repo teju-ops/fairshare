@@ -25,7 +25,7 @@ import './App.css'
 
 const RAW_API_BASE =
   import.meta.env.VITE_API_BASE_URL ||
-  (import.meta.env.DEV ? '/api' : 'https://fairshare-backend.onrender.com/api')
+  '/api'
 
 const API_BASE = RAW_API_BASE.trim().replace(/\s+/g, '')
 
